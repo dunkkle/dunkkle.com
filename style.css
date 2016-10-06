@@ -1,0 +1,94 @@
+
+body {
+	height: 95vh;
+	background: #343434;
+	font-family: 'Dosis', sans-serif;
+	color: #f2f2f2;
+}
+
+.wrapper {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	overflow: visible;
+}
+
+.box {
+	padding: 20px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.box div {
+	padding: 0 20px 0 20px;
+}
+
+.box a {
+    font-size: 1.1em;
+    color: #f2f2f2;
+    text-decoration: none;
+
+}
+
+#links {
+    padding-top: 0;
+}
+
+#logo {
+    padding-bottom: 0;
+}
+
+#profiles {
+	flex-wrap: wrap;
+}
+
+.logo-letter {
+	fill: #fff;
+	fill-opacity: 0;
+    stroke-dasharray: 1136;
+    stroke-dashoffset: 1100;
+    animation: draw 4s ease-out forwards;
+    -webkit-animation: draw 4s ease-out forwards;
+    -moz-animation: draw 4s ease-out forwards;
+    -o-animation: draw 4s ease-out forwards;
+}
+
+@keyframes draw {
+
+	0% {
+		fill-opacity: 0;
+	}
+
+	25% {
+		fill-opacity: .1;
+	}
+
+    100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+    stroke: #2FCC9F;
+    stroke-width: 6;
+    }
+}
+
+@-webkit-keyframes draw {
+to {
+    stroke-dashoffset: 0;
+    }
+}
+
+@-moz-keyframes draw {
+to {
+    stroke-dashoffset: 0;
+    }
+}
+
+@-o-keyframes draw {
+to {
+    stroke-dashoffset: 0;
+    }
+}
