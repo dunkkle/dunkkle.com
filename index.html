@@ -10,12 +10,30 @@
 	<link href="https://fonts.googleapis.com/css?family=Dosis:200" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/style.css">
 
+	<style type="text/css">
+		
+		#video{
+		 position: relative;
+		 background: transparent;
+		}
+
+		.ytplayer-container{
+		 position: absolute;
+		 top: 0;
+		 z-index: -1;
+		}
+
+	</style>
+
 </head>
 
 
 <body>
 
+<div id="video"></div>
+
 <div class="wrapper">
+
 	
 	<div id="logo" class="box">
 
@@ -44,38 +62,46 @@
 		<div>
 			<a href="https://soundcloud.com/dunkkle">music</a>
 		</div>
+
 		<div>
 			<a href="https://github.com/dunkkle">projects</a>
 		</div>
+
 		<div>
 			<a href="http://duncanshea.com">about</a>
 		</div>
+
 	</div>
 
 	<div id="soundcloud" class="box">
 		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/281996107&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 	</div>
 
-	<div class="box">
-	<!-- WIDGET CONTENTS COPYRIGHT SURFLINE.COM 2017 -->
-	<!-- WIDGET VERSION 2.0 MARCH 2017 | LEADBETTER POINT -->
-	<div class="slwd_bt"><script type="text/javascript" src="http://www.surfline.com/widgets2/widget_output_forecast.cfm?id=4990&mdl=1111&layout=&wid=59446&ftr=1"></script><div class="slwd_bx"><a href="http://www.surfline.com" class="slwd_lk">Surfline</a> <a href="http://www.surfline.com/surf-forecasts" class="slwd_lk">Surf Forecasts</a></div><div class="slwd_tl"></div><div class="slwd_tr"></div></div>
-	<!-- WIDGET CONTENTS COPYRIGHT SURFLINE.COM 2017 -->
-
-	
-		<!-- <img src="http://imgs.xkcd.com/comics/earth_temperature_timeline.png"> -->
-
-	</div>
-
-	<div class="box">
-		<!-- WIDGET CONTENTS COPYRIGHT SURFLINE.COM 2017 -->
-		<!-- WIDGET VERSION 2.0 MARCH 2017 | COAL OIL POINT -->
-		<div class="slwd_bt"><script type="text/javascript" src="http://www.surfline.com/widgets2/widget_output_forecast.cfm?id=4995&mdl=1111&layout=&wid=59447&ftr=1"></script><div class="slwd_bx"><a href="http://www.surfline.com" class="slwd_lk">Surfline</a> <a href="http://www.surfline.com/surf-forecasts" class="slwd_lk">Surf Forecasts</a></div><div class="slwd_tl"></div><div class="slwd_tr"></div></div>
-		<!-- WIDGET CONTENTS COPYRIGHT SURFLINE.COM 2017 -->
-
-	</div>
-
 </div>
+
+
+<!--  Add youtube jquery thingy  -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ <script src="src/jquery.youtubebackground.js"></script>
+
+ <script type="text/javascript">
+ 	
+ 	$('#video').YTPlayer({
+ 	    fitToBackground: true,
+ 	    videoId: '1PrFBMRRnPA',
+ 	    playerVars: {
+ 	         modestbranding: 0,
+ 	         autoplay: 1,
+ 	         controls: 1,
+ 	         showinfo: 0,
+ 	         branding: 0,
+ 	         rel: 0,
+ 	         autohide: 0,
+ 	         start: 59
+ 	       }
+ 	});
+
+ </script>
 
 </body>
 </html>
